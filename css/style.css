@@ -1,0 +1,201 @@
+body
+{
+    margin:0;
+}
+
+#pageX
+{
+    height: 100vh;
+    background-color: black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.bodyX
+{
+    width:60px;
+    height:60px;
+    background-color: rgb(113, 223, 98);
+    border-radius: 10px;
+    position: relative;
+    margin:20px;
+}
+
+.bodyX::after
+{
+    content:"";
+    position: absolute;
+    background-color:rgba(255,255,255,0.3);
+    top:20px;
+    right:5px;
+    bottom:5px;
+    left:5px;
+    border-radius: 10px;
+    z-index: 7;
+}
+
+.bodyX::before
+{
+    content:"";
+    position: absolute;
+    background-color: rgb(113, 223, 98);
+    width: 73px;
+    top:55px;
+    bottom:0px;
+    right: 10px;
+    left:-7px;
+    border-radius: 15px;
+
+}
+
+#yellowFrog::after
+{
+   background-color:  rgba(218, 214, 218, 0.7);
+}
+
+#yellowFrog::before
+{
+    background-color: yellow;
+}
+
+#redFrog::before
+{
+    background-color: red;
+}
+
+.eyeBack
+{
+    height:70px;
+    width: 15px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 3;
+}
+
+#left
+{
+    left:0px;
+    bottom:0px;
+    background-color: rgb(113, 223, 98);
+}
+
+#leftY
+{
+    left:0px;
+    bottom:0px;
+    background-color: yellow;
+}
+
+#leftR
+{
+    left:0px;
+    bottom:0px;
+    background-color: red;
+} 
+
+#right
+{
+    right:0px;
+    bottom:0px;
+    background-color: rgb(113, 223, 98);
+}
+
+#rightY
+{
+    right:0px;
+    bottom:0px;
+    background-color: yellow;
+}
+
+#rightR
+{
+    right:0px;
+    bottom:0px;
+    background-color: red;
+}
+
+.eye
+{
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin:2px;
+}
+
+.leg
+{
+    content: "";
+    width:20px;
+    height: 30px;
+    position: absolute;
+    left:-10px;
+    bottom:0px;
+    right:10px;
+    transform: rotate(-45deg);
+    border-radius: 10px;
+    background-color: rgb(113, 223, 98);
+}
+
+#rightleg
+{
+    background-color: rgb(113, 223, 98);
+    transform: rotate(45deg);
+    left:4px;
+    bottom:-1px;
+    right:10px;
+}
+
+#leftlegY
+{
+    background-color: yellow;
+}
+
+#leftlegR
+{
+    background-color: red;
+} 
+
+#rightlegY
+{
+    background-color:yellow;
+    transform: rotate(45deg);
+    left:4px;
+    bottom:-1px;
+    right:10px;
+}
+
+#rightlegR
+{
+    background-color: red;
+    transform: rotate(45deg);
+    left:4px;
+    bottom:-1px;
+    right:10px;
+}
+
+#redFrog
+{
+    background-color: red;
+}
+
+#yellowFrog
+{
+    background-color: yellow;
+}
+
+@keyframes leaves {
+   
+    100% {
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+    }
+}
+
+.bodyX {
+    animation: leaves 1s ease-in-out infinite alternate;
+    -webkit-animation: leaves 1s ease-in-out infinite alternate;
+}
